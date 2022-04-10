@@ -1,6 +1,6 @@
 // ignore_for_file: unnecessary_null_comparison
 
-import 'package:getx_app/library/api_request.dart';
+import 'package:getx_app/api/api_request.dart';
 import 'package:getx_app/models/post.dart';
 
 class PostsProvider {

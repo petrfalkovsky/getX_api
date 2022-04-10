@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_app/pages/alerts/alerts_controller.dart';
+import 'package:getx_app/pages/messenger/messenger_controller.dart';
 
 class AlertsPage extends GetView<AlertsController> {
   @override

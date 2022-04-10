@@ -1,10 +1,8 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_app/pages/account/account_page.dart';
-import 'package:getx_app/pages/alerts/alerts_page.dart';
 import 'package:getx_app/pages/home/home_page.dart';
-import 'package:getx_app/pages/posts/posts_page.dart';
+import 'package:getx_app/pages/messenger/messenger_page.dart';
+import 'package:getx_app/pages/profile/profile_page.dart';
 
 import 'dashboard_controller.dart';
 
@@ -19,7 +17,8 @@ class DashboardPage extends StatelessWidget {
               index: controller.tabIndex,
               children: [
                 HomePage(),
-                PostsPage(),
+// todo если понадобится сделать четвертую вкладку в навигации, можно подключить тут
+                // PostsPage(),
                 AlertsPage(),
                 AccountPage(),
               ],
@@ -32,33 +31,40 @@ class DashboardPage extends StatelessWidget {
             showSelectedLabels: false,
             showUnselectedLabels: false,
             items: [
-              _bottomNavigationBarItem(
-                icon: CupertinoIcons.home,
-                label: 'Home',
-              ),
-              _bottomNavigationBarItem(
-                icon: CupertinoIcons.book,
-                label: 'News',
-              ),
-              _bottomNavigationBarItem(
-                icon: CupertinoIcons.bell,
-                label: 'Alerts',
-              ),
-              _bottomNavigationBarItem(
-                icon: CupertinoIcons.person,
-                label: 'Account',
-              ),
+              BottomNavigationBarItem(
+                  label: 'Home',
+                  icon: Image.asset(
+                    "assets/icons/home.png",
+                    height: 40,
+                    width: 40,
+                  )),
+              BottomNavigationBarItem(
+                  label: 'Profile',
+                  icon: Image.asset(
+                    "assets/icons/messenger.png",
+                    height: 40,
+                    width: 40,
+                  )),
+              BottomNavigationBarItem(
+                  label: 'Profile',
+                  icon: Image.asset(
+                    "assets/icons/unicorn.png",
+                    height: 40,
+                    width: 40,
+                  )),
+
+              // todo если понадобится сделать четвертую вкладку в навигации, можно подключить тут
+              // BottomNavigationBarItem(
+              //                 label: 'Home',
+              //                 icon: Image.asset(
+              //                   "assets/icons/home.png",
+              //                   height: 40,
+              //                   width: 40,
+              //                 )),
             ],
           ),
         );
       },
-    );
-  }
-
-  _bottomNavigationBarItem({required IconData icon, required String label}) {
-    return BottomNavigationBarItem(
-      icon: Icon(icon),
-      label: label,
     );
   }
 }
