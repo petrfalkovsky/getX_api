@@ -8,7 +8,6 @@
 - быстро, недорого по [макету](https://www.figma.com/file/KswYuwsMpuM8m6keyhfphn/Tandem?node-id=808%3A243)
 
 
-## apk можно [скачать по ссылке (в процессе)]()
 
 # Резюме разработчика
 - на русском языке [в гугл док](https://docs.google.com/document/d/1CCfJFvgmqnxjfiOAsmCUO2wQwqHyatsAuDBLwni1FnI/edit)
