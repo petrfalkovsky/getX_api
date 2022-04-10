@@ -1,16 +1,17 @@
-# getx_null_safe
+# Фриланс проект - верстка для дейтингового приложения
+от [Анны](https://t.me/kkkotovaa) выполняет [Тереньтев Петр](https://career.habr.com/poteryal_trusy)
 
-A new Flutter project.
+## Приложение Tandem
+используемые технологии: Flutter/Dart, GetX, Git, Dio, Figma
 
-## Getting Started
+## Требования:
+- быстро, недорого
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+## apk можно [скачать по ссылке (в процессе)]()
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+# Резюме разработчика
+- на русском языке [в гугл док](https://docs.google.com/document/d/1CCfJFvgmqnxjfiOAsmCUO2wQwqHyatsAuDBLwni1FnI/edit)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+гифка в процессе
