@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_app/ui/messenger/messenger_controller.dart';
 
-import 'home_controller.dart';
-
-class HomePage extends GetView<HomeController> {
+class AlertsPage extends GetView<AlertsController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Home'),
-      ),
       body: Container(
         child: Center(
           child: Text(
-            "Home Page",
+            "Мессенджер будет тут",
             style: TextStyle(fontSize: 20),
           ),
         ),

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_app/pages/home/home_page.dart';
-import 'package:getx_app/pages/messenger/messenger_page.dart';
-import 'package:getx_app/pages/profile/profile_page.dart';
+import 'package:getx_app/ui/home/home_page.dart';
+import 'package:getx_app/ui/messenger/messenger_page.dart';
+import 'package:getx_app/ui/profile/profile_page.dart';
 
-import 'dashboard_controller.dart';
+import 'navigation_controller.dart';
 
 class DashboardPage extends StatelessWidget {
   @override
@@ -32,21 +32,21 @@ class DashboardPage extends StatelessWidget {
             showUnselectedLabels: false,
             items: [
               BottomNavigationBarItem(
-                  label: 'Home',
+                  label: 'Искать',
                   icon: Image.asset(
                     "assets/icons/home.png",
                     height: 40,
                     width: 40,
                   )),
               BottomNavigationBarItem(
-                  label: 'Profile',
+                  label: 'Сообщения',
                   icon: Image.asset(
                     "assets/icons/messenger.png",
                     height: 40,
                     width: 40,
                   )),
               BottomNavigationBarItem(
-                  label: 'Profile',
+                  label: 'Профиль',
                   icon: Image.asset(
                     "assets/icons/unicorn.png",
                     height: 40,

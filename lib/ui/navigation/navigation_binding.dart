@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
-import 'package:getx_app/pages/home/home_controller.dart';
-import 'package:getx_app/pages/posts/posts_controller.dart';
-import 'package:getx_app/pages/profile/profile_controller.dart';
+import 'package:getx_app/ui/home/home_controller.dart';
+import 'package:getx_app/ui/navigation/navigation_controller.dart';
+import 'package:getx_app/ui/posts/posts_controller.dart';
+import 'package:getx_app/ui/profile/profile_controller.dart';
 
-import 'dashboard_controller.dart';
+import 'navigation_controller.dart';
 
 class DashboardBinding extends Bindings {
   @override
