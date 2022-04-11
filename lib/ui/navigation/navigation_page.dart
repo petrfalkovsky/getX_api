@@ -20,7 +20,7 @@ class DashboardPage extends StatelessWidget {
 // todo если понадобится сделать четвертую вкладку в навигации, можно подключить тут
                 // PostsPage(),
                 AlertsPage(),
-                AccountPage(),
+                ProfilePage(),
               ],
             ),
           ),

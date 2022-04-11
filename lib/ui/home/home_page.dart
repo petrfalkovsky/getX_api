@@ -72,97 +72,88 @@ class HomePage extends GetView<HomeController> {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        ElevatedButton.icon(
+                        OutlinedButton.icon(
                           onPressed: () {},
                           icon: Icon(
                             Icons.favorite,
                             color: Color.fromARGB(255, 235, 9, 47),
                             size: 24.0,
                           ),
-                          label: Text('Страсть'),
-                          style: ButtonStyle(
-                              minimumSize:
-                                  MaterialStateProperty.all(Size(114, 40)),
-                              maximumSize:
-                                  MaterialStateProperty.all(Size(300, 40)),
-                              shape: MaterialStateProperty.all<
-                                      RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(50.0),
-                              )),
-                              backgroundColor: MaterialStateProperty.all(
-                                  Colors.white.withOpacity(0.4)),
-                              padding: MaterialStateProperty.all(
-                                  EdgeInsets.symmetric(
-                                      vertical: 5, horizontal: 33)),
-                              textStyle: MaterialStateProperty.all(
-                                TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                    color: Colors.white),
-                              )),
+                          label: Text('Страсть '),
+                          style: OutlinedButton.styleFrom(
+                            primary: Colors.white,
+                            backgroundColor: Colors.white.withOpacity(0.4),
+                            minimumSize: Size(114, 40),
+                            maximumSize: Size(300, 40),
+                            textStyle: TextStyle(
+                              fontWeight: FontWeight.normal,
+                              fontSize: 16,
+                              // fontFamily: Inter
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 23),
+                            shape: const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(50))),
+                            side: BorderSide(
+                                color: Colors.white.withOpacity(0.2), width: 0),
+                          ),
                         ),
                         SizedBox(width: 11.w),
-                        ElevatedButton.icon(
+                        OutlinedButton.icon(
                           onPressed: () {},
                           icon: Icon(
                             Icons.games,
-                            color: Color.fromARGB(255, 17, 16, 16),
+                            color: Color.fromARGB(255, 8, 8, 8),
                             size: 24.0,
                           ),
-                          label: Text('Игры'),
-                          style: ButtonStyle(
-                              minimumSize:
-                                  MaterialStateProperty.all(Size(114, 40)),
-                              maximumSize:
-                                  MaterialStateProperty.all(Size(300, 40)),
-                              shape: MaterialStateProperty.all<
-                                      RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(50.0),
-                              )),
-                              backgroundColor: MaterialStateProperty.all(
-                                  Colors.white.withOpacity(0.4)),
-                              padding: MaterialStateProperty.all(
-                                  EdgeInsets.symmetric(
-                                      vertical: 5, horizontal: 33)),
-                              textStyle: MaterialStateProperty.all(
-                                TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                    color: Colors.white),
-                              )),
+                          label: Text('Игры '),
+                          style: OutlinedButton.styleFrom(
+                            primary: Colors.white,
+                            backgroundColor: Colors.white.withOpacity(0.4),
+                            minimumSize: Size(114, 40),
+                            maximumSize: Size(300, 40),
+                            textStyle: TextStyle(
+                              fontWeight: FontWeight.normal,
+                              fontSize: 16,
+                              // fontFamily: Inter
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 23),
+                            shape: const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(50))),
+                            side: BorderSide(
+                                color: Colors.white.withOpacity(0.2), width: 0),
+                          ),
                         ),
                         SizedBox(width: 11.w),
-                        ElevatedButton.icon(
+                        OutlinedButton.icon(
                           onPressed: () {},
                           icon: Icon(
                             Icons.favorite,
-                            color: Color.fromARGB(255, 228, 211, 61),
+                            color: Color.fromARGB(255, 186, 235, 9),
                             size: 24.0,
                           ),
-                          label: Text('Просветление'),
-                          style: ButtonStyle(
-                              minimumSize:
-                                  MaterialStateProperty.all(Size(114, 40)),
-                              maximumSize:
-                                  MaterialStateProperty.all(Size(300, 40)),
-                              shape: MaterialStateProperty.all<
-                                      RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(50.0),
-                              )),
-                              backgroundColor: MaterialStateProperty.all(
-                                  Colors.white.withOpacity(0.4)),
-                              padding: MaterialStateProperty.all(
-                                  EdgeInsets.symmetric(
-                                      vertical: 5, horizontal: 33)),
-                              textStyle: MaterialStateProperty.all(
-                                TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 16,
-                                    color: Colors.white),
-                              )),
+                          label: Text('Просветление '),
+                          style: OutlinedButton.styleFrom(
+                            primary: Colors.white,
+                            backgroundColor: Colors.white.withOpacity(0.4),
+                            minimumSize: Size(114, 40),
+                            maximumSize: Size(300, 40),
+                            textStyle: TextStyle(
+                              fontWeight: FontWeight.normal,
+                              fontSize: 16,
+                              // fontFamily: Inter
+                            ),
+                            padding: EdgeInsets.symmetric(
+                                vertical: 5, horizontal: 23),
+                            shape: const RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(50))),
+                            side: BorderSide(
+                                color: Colors.white.withOpacity(0.2), width: 0),
+                          ),
                         ),
                         SizedBox(width: 11.w),
                       ],
