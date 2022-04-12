@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:getx_app/ui/widgets/button_gradient_icon_widget.dart';
 import 'package:getx_app/ui/widgets/button_gradient_widget.dart';
 
 import 'profile_controller.dart';
@@ -152,7 +153,7 @@ class ProfilePage extends GetView<ProfileController> {
                           height: 50.h),
                       Spacer(),
                       GragientButton(
-                        onPressed: () {},
+                        onPressed: () => Get.toNamed('/mycity_page'),
                         child: Text('Москва'),
                       )
                     ],
@@ -190,7 +191,7 @@ class ProfilePage extends GetView<ProfileController> {
                         ),
                         Spacer(),
                         OutlinedButton(
-                          onPressed: () {},
+                          onPressed: () => Get.toNamed('/bithday_date_page'),
                           child: Text('01.01.2001'),
                           style: OutlinedButton.styleFrom(
                             primary: Colors.white.withOpacity(0.6),

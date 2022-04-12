@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:getx_app/ui/widgets/button_blur_widget.dart';
 
 import 'home_controller.dart';
 
@@ -98,6 +99,11 @@ class HomePage extends GetView<HomeController> {
                             side: BorderSide(
                                 color: Colors.white.withOpacity(0.2), width: 0),
                           ),
+                        ),
+                        SizedBox(width: 11.w),
+                        ButtonBlur(
+                          onPressed: () {},
+                          child: Text('Блюр'),
                         ),
                         SizedBox(width: 11.w),
                         OutlinedButton.icon(
