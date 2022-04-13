@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:getx_app/themes/app_theme.dart';
 import 'package:getx_app/ui/birthday_date/birthday_date_controller.dart';
 import 'package:getx_app/ui/widgets/button_gradient_long_widget.dart';
 
@@ -12,16 +13,28 @@ class BirthdayDatePage extends GetView<BirthdayDatePageController> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         // leadingWidth: 60,
-        leading: Icon(Icons.arrow_back_ios_new_rounded,
-            color: Color.fromRGBO(36, 40, 51, 1)),
+        leading: IconButton(
+          onPressed: () => Get.back(),
+          icon: Icon(Icons.arrow_back_ios_new_rounded,
+              color: Color.fromRGBO(36, 40, 51, 1)),
+        ),
         title: Center(
-            child: Text('Дата рождения', style: TextStyle(fontSize: 24))),
+          child: Text('Дата рождения',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: AppColors.secondary,
+              )),
+        ),
         actions: [
-          Image.asset(
-            'assets/icons/direct_messege_appbar.png',
-            width: 25.w,
+          IconButton(
+            icon: Image.asset(
+              'assets/icons/direct_messege_appbar.png',
+              width: 25.w,
+            ),
+            onPressed: () => Get.toNamed('/chat_page'),
           ),
-          SizedBox(width: 22.w)
+          SizedBox(width: 16.w)
         ],
         backgroundColor: Colors.transparent,
         elevation: 0,

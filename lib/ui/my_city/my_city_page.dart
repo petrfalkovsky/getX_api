@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:getx_app/themes/app_theme.dart';
 import 'package:getx_app/ui/my_city/my_city_page_controller.dart';
 import 'package:getx_app/ui/widgets/button_gradient_long_widget.dart';
 
@@ -12,16 +13,28 @@ class MyCityPage extends GetView<MyCityPageController> {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         // leadingWidth: 60,
-        leading: Icon(Icons.arrow_back_ios_new_rounded,
-            color: Color.fromRGBO(36, 40, 51, 1)),
+        leading: IconButton(
+          onPressed: () => Get.back(),
+          icon: Icon(Icons.arrow_back_ios_new_rounded,
+              color: Color.fromRGBO(36, 40, 51, 1)),
+        ),
         title: Center(
-            child: Text('Дата рождения', style: TextStyle(fontSize: 24))),
-        actions: [
-          Image.asset(
-            'assets/icons/direct_messege_appbar.png',
-            width: 25.w,
+          child: Text('Мой город',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: AppColors.secondary,
+              )),
+        ),
+        actions: <Widget>[
+          IconButton(
+            icon: Image.asset(
+              'assets/icons/direct_messege_appbar.png',
+              width: 25.w,
+            ),
+            onPressed: () => Get.toNamed('/chat_page'),
           ),
-          SizedBox(width: 22.w)
+          SizedBox(width: 16.w)
         ],
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -37,7 +50,7 @@ class MyCityPage extends GetView<MyCityPageController> {
                     padding: EdgeInsets.only(top: 110.h),
                     child: GragientLongButtonOne(
                       onPressed: () {},
-                      child: Text('01 Марта 1927'),
+                      child: Text('Москва'),
                     ),
                   ),
                 ),

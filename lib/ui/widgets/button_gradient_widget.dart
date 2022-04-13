@@ -43,7 +43,7 @@ class GragientButton extends StatelessWidget {
           elevation: 0,
           shadowColor: Color.fromARGB(255, 241, 196, 210),
           minimumSize: Size(114, 40),
-          maximumSize: Size(150, 40),
+          maximumSize: Size(248, 40),
           primary: Colors.transparent,
           shape: RoundedRectangleBorder(borderRadius: borderRadius),
         ),

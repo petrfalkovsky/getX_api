@@ -149,8 +149,8 @@ class ProfilePage extends GetView<ProfileController> {
                           ],
                         ),
                       ),
-                      Image.asset("assets/icons/online_point.png",
-                          height: 50.h),
+                      SizedBox(width: 14.w),
+                      Image.asset("assets/icons/online_point.png", width: 10.w),
                       Spacer(),
                       GragientButton(
                         onPressed: () => Get.toNamed('/mycity_page'),
