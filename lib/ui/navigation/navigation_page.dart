@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_app/ui/home/home_page.dart';
-import 'package:getx_app/ui/messenger/messenger_page.dart';
+import 'package:getx_app/ui/messenger/chat/messenger_page.dart';
 import 'package:getx_app/ui/profile/profile_page.dart';
 
 import 'navigation_controller.dart';
@@ -19,7 +19,7 @@ class DashboardPage extends StatelessWidget {
                 HomePage(),
 // todo если понадобится сделать четвертую вкладку в навигации, можно подключить тут
                 // PostsPage(),
-                AlertsPage(),
+                MessengerPage(),
                 ProfilePage(),
               ],
             ),

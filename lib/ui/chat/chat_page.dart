@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:getx_app/themes/app_theme.dart';
 import 'package:getx_app/ui/chat/chat_controller.dart';
-import 'package:getx_app/ui/messenger/chat/bubbles_widget.dart';
-import 'package:getx_app/ui/messenger/chat/voice_bubble.dart';
+import 'package:getx_app/ui/chat/bubbles_widget.dart';
+import 'package:getx_app/ui/chat/voice_bubble.dart';
 
 class ChatPage extends GetView<ChatPageController> {
   @override
@@ -74,62 +74,61 @@ class ChatPage extends GetView<ChatPageController> {
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
-        body: Column(
+        body: Stack(
+          alignment: Alignment.center,
           children: [
-            Expanded(
-              child: ListView(
-                children: [
-                  UserProfileBubble(
-                    onPressed: () {},
-                    child: Text(
-                      'Они сошлись. Волна и камень, Стихи и проза, лед и пламень, Не столь различны меж собой. ',
-                      style: const TextStyle(
-                        color: AppColors.textLigth,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),
+            ListView(
+              children: [
+                UserProfileBubble(
+                  onPressed: () {},
+                  child: Text(
+                    'Они сошлись. Волна и камень, Стихи и проза, лед и пламень, Не столь различны меж собой. ',
+                    style: const TextStyle(
+                      color: AppColors.textLigth,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SecondHalfUserProfileBubble(
-                    onPressed: () {},
-                    child: Text(
-                      'Хочу тебя прямо сейчас ️👄',
-                      style: const TextStyle(
-                        color: AppColors.textDark,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),
+                ),
+                SecondHalfUserProfileBubble(
+                  onPressed: () {},
+                  child: Text(
+                    'Хочу тебя прямо сейчас ️👄',
+                    style: const TextStyle(
+                      color: AppColors.textDark,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  SecondUserProfileBubble(
-                    onPressed: () {},
-                    child: Text(
-                      'Что вам дано, то не влечет Вас непрестанно змий зовет К себе, к таинственному древу. Запретный плод вам подавай, А без того вам рай - не рай',
-                      style: const TextStyle(
-                        color: AppColors.textDark,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),
+                ),
+                SecondUserProfileBubble(
+                  onPressed: () {},
+                  child: Text(
+                    'Что вам дано, то не влечет Вас непрестанно змий зовет К себе, к таинственному древу. Запретный плод вам подавай, А без того вам рай - не рай',
+                    style: const TextStyle(
+                      color: AppColors.textDark,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  UserProfileBubble(
-                    onPressed: () {},
-                    child: Text(
-                      'Это так прелестно',
-                      style: const TextStyle(
-                        color: AppColors.textLigth,
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                      ),
+                ),
+                UserProfileBubble(
+                  onPressed: () {},
+                  child: Text(
+                    'Это так прелестно',
+                    style: const TextStyle(
+                      color: AppColors.textLigth,
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
-                  VoiceLightBubble(),
-                  VoiceDarkBubble(),
-                ],
-              ),
+                ),
+                VoiceLightBubble(),
+                VoiceDarkBubble(),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 42),
+            Positioned(
+              bottom: 40,
               child: Container(
                   height: 40,
                   width: MediaQuery.of(context).size.width * 0.95,
