@@ -143,7 +143,7 @@ class VoiceLightBubble extends StatelessWidget {
             decoration: BoxDecoration(
               boxShadow: [
                 BoxShadow(
-                  color: Color.fromARGB(255, 27, 17, 167).withOpacity(0.2),
+                  color: Color.fromARGB(255, 168, 164, 216).withOpacity(0.2),
                   spreadRadius: 0.5,
                   blurRadius: 10,
                   offset: Offset(0, 0),

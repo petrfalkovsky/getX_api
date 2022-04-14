@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:getx_app/ui/widgets/button_gradient_icon_widget.dart';
-import 'package:getx_app/ui/widgets/button_gradient_widget.dart';
+import 'package:getx_app/ui/widgets/button_gradient_widget_one.dart';
 
 import 'profile_controller.dart';
 
@@ -152,7 +152,7 @@ class ProfilePage extends GetView<ProfileController> {
                       SizedBox(width: 14.w),
                       Image.asset("assets/icons/online_point.png", width: 10.w),
                       Spacer(),
-                      GragientButton(
+                      GragientButtonOne(
                         onPressed: () => Get.toNamed('/mycity_page'),
                         child: Text('Москва'),
                       )
@@ -164,7 +164,7 @@ class ProfilePage extends GetView<ProfileController> {
                     child: Row(
                       children: [
                         OutlinedButton.icon(
-                          onPressed: () {},
+                          onPressed: () => Get.toNamed('/interests_page'),
                           icon: Image.asset(
                             'assets/icons/fire.png',
                             fit: BoxFit.cover,

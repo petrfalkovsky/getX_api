@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:getx_app/themes/app_theme.dart';
 import 'package:getx_app/ui/chat/chat_controller_two.dart';
-import 'package:getx_app/ui/widgets/button_gradient_widget.dart';
+import 'package:getx_app/ui/widgets/button_gradient_widget_one.dart';
 import 'package:getx_app/ui/widgets/button_white_widget.dart';
 
 class ChatPageTwo extends GetView<ChatPageTwoController> {
@@ -153,7 +153,7 @@ class ChatPageTwo extends GetView<ChatPageTwoController> {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              GragientButton(
+                              GragientButtonOne(
                                 onPressed: () {},
                                 child: Text('Эффектно выглядишь)'),
                               ),

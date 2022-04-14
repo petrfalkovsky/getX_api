@@ -17,7 +17,11 @@ class HomePage extends GetView<HomeController> {
           child: ProcentsWidget(),
         ),
         title: WhereSlidesWidget(),
-        actions: [Image.asset('assets/icons/menu.png')],
+        actions: [
+          GestureDetector(
+              onTap: () => Get.toNamed('/filtres_page'),
+              child: Image.asset('assets/icons/menu.png'))
+        ],
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),

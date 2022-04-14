@@ -12,7 +12,7 @@ class WhiteButton extends StatelessWidget {
     Key? key,
     this.borderRadius,
     this.width,
-    this.height = 60.0,
+    this.height = 40.0,
     this.gradient = const LinearGradient(colors: [Colors.cyan, Colors.indigo]),
     required this.onPressed,
     required this.child,
@@ -25,6 +25,14 @@ class WhiteButton extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
+        boxShadow: [
+          BoxShadow(
+            color: Color.fromARGB(255, 27, 17, 167).withOpacity(0.05),
+            spreadRadius: 3,
+            blurRadius: 10,
+            offset: Offset(3, 0),
+          )
+        ],
         color: Colors.white,
         borderRadius: borderRadius,
       ),

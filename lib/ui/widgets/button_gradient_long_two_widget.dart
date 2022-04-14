@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class GragientLongButtonOne extends StatelessWidget {
+class GragientLongButtonTwo extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final double? width;
   final double height;
@@ -8,7 +8,7 @@ class GragientLongButtonOne extends StatelessWidget {
   final VoidCallback? onPressed;
   final Widget child;
 
-  const GragientLongButtonOne({
+  const GragientLongButtonTwo({
     Key? key,
     this.borderRadius,
     this.width,
@@ -27,7 +27,7 @@ class GragientLongButtonOne extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: Color.fromARGB(255, 27, 17, 167).withOpacity(0.18),
+            color: Color.fromARGB(255, 27, 17, 167).withOpacity(0.25),
             spreadRadius: 3,
             blurRadius: 10,
             offset: Offset(3, 0),
@@ -38,7 +38,7 @@ class GragientLongButtonOne extends StatelessWidget {
             end: Alignment.centerRight,
             colors: [
               Color.fromRGBO(127, 187, 251, 1),
-              Color.fromRGBO(255, 139, 173, 1),
+              Color.fromRGBO(149, 134, 253, 1),
             ]),
         borderRadius: borderRadius,
       ),

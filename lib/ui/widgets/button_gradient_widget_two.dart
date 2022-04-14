@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class GragientLongButtonOne extends StatelessWidget {
+class GragientButtonTwo extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final double? width;
   final double height;
@@ -8,12 +8,15 @@ class GragientLongButtonOne extends StatelessWidget {
   final VoidCallback? onPressed;
   final Widget child;
 
-  const GragientLongButtonOne({
+  const GragientButtonTwo({
     Key? key,
     this.borderRadius,
     this.width,
     this.height = 40.0,
-    this.gradient = const LinearGradient(colors: [Colors.cyan, Colors.indigo]),
+    this.gradient = const LinearGradient(colors: [
+      Color.fromARGB(255, 195, 186, 252),
+      Color.fromARGB(255, 97, 209, 253)
+    ]),
     required this.onPressed,
     required this.child,
   }) : super(key: key);
@@ -25,21 +28,7 @@ class GragientLongButtonOne extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        boxShadow: [
-          BoxShadow(
-            color: Color.fromARGB(255, 27, 17, 167).withOpacity(0.18),
-            spreadRadius: 3,
-            blurRadius: 10,
-            offset: Offset(3, 0),
-          )
-        ],
-        gradient: const LinearGradient(
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-            colors: [
-              Color.fromRGBO(127, 187, 251, 1),
-              Color.fromRGBO(255, 139, 173, 1),
-            ]),
+        gradient: gradient,
         borderRadius: borderRadius,
       ),
       child: ElevatedButton(
@@ -49,9 +38,9 @@ class GragientLongButtonOne extends StatelessWidget {
           onSurface: Colors.transparent,
           side: BorderSide(color: Colors.white.withOpacity(0), width: 0),
           elevation: 0,
-          shadowColor: Color.fromARGB(255, 44, 39, 41),
-          minimumSize: Size(333, 40),
-          maximumSize: Size(333, 40),
+          shadowColor: Color.fromARGB(255, 241, 196, 210),
+          minimumSize: Size(114, 40),
+          maximumSize: Size(248, 40),
           primary: Colors.transparent,
           shape: RoundedRectangleBorder(borderRadius: borderRadius),
         ),
