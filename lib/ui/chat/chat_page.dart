@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:getx_app/themes/app_theme.dart';
 import 'package:getx_app/ui/chat/chat_controller.dart';
-import 'package:getx_app/ui/messenger/bubbles_widget.dart';
-import 'package:getx_app/ui/messenger/voice_bubble.dart';
+import 'package:getx_app/ui/messenger/chat/bubbles_widget.dart';
+import 'package:getx_app/ui/messenger/chat/voice_bubble.dart';
 
 class ChatPage extends GetView<ChatPageController> {
   @override
@@ -128,18 +128,49 @@ class ChatPage extends GetView<ChatPageController> {
                 ],
               ),
             ),
-            Container(
-                height: 43,
-                width: MediaQuery.of(context).size.width * 0.95,
-                decoration: BoxDecoration(
-                    color: Colors.deepOrange[200],
-                    borderRadius: BorderRadius.all(Radius.circular(25.0))),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Container(
-                      width: MediaQuery.of(context).size.width * 0.95,
-                      child: TextFormField()),
-                ))
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 42),
+              child: Container(
+                  height: 40,
+                  width: MediaQuery.of(context).size.width * 0.95,
+                  decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                          color:
+                              Color.fromARGB(255, 27, 17, 167).withOpacity(0.2),
+                          spreadRadius: 0.5,
+                          blurRadius: 10,
+                          offset: Offset(0, 0),
+                        )
+                      ],
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(25.0))),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(3, 0, 0, 0),
+                    child: Row(
+                      children: [
+                        Image.asset('assets/icons/add_pic.png', width: 34),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(11, 10, 11, 10),
+                          child: Container(
+                              width: MediaQuery.of(context).size.width * 0.55,
+                              child: TextFormField(
+                                decoration: new InputDecoration.collapsed(
+                                  hintText: 'Сообщение',
+                                ),
+                              )),
+                        ),
+                        Spacer(),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(10, 2, 15, 0),
+                          child: Image.asset(
+                              'assets/icons/direct_messege_appbar.png',
+                              height: 20),
+                        ),
+                      ],
+                    ),
+                  )),
+            )
           ],
         ));
   }
