@@ -37,7 +37,7 @@ class FiltresPage extends GetView<InterestsController> {
           ),
         ],
         title: Padding(
-          padding: const EdgeInsets.only(left: 50),
+          padding: const EdgeInsets.only(left: 30),
           child: Text('Tandem',
               style: TextStyle(
                 fontSize: 24,
@@ -48,245 +48,253 @@ class FiltresPage extends GetView<InterestsController> {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: Center(
-        child: Stack(
-          children: [
-            SingleChildScrollView(
-              child: Align(
-                alignment: FractionalOffset.topCenter,
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(20, 100, 20, 10),
-                  child: Column(
-                    children: [
-                      SizedBox(height: 10.h),
-                      Stack(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Expanded(
-                                flex: 1,
-                                child: WhiteButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    'Парни',
-                                    style: TextStyle(
-                                        color:
-                                            Color.fromRGBO(127, 187, 251, 1)),
+      body: SafeArea(
+        minimum: EdgeInsets.only(left: 30, right: 30, top: 0, bottom: 20),
+        child: Center(
+          child: Stack(
+            children: [
+              SingleChildScrollView(
+                child: Align(
+                  alignment: FractionalOffset.topCenter,
+                  child: Padding(
+                    padding: EdgeInsets.fromLTRB(0, 20, 0, 10),
+                    child: Column(
+                      children: [
+                        // SizedBox(height: 10.h),
+                        Stack(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Expanded(
+                                  flex: 1,
+                                  child: WhiteButton(
+                                    onPressed: () {},
+                                    child: Text(
+                                      'Парни',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(127, 187, 251, 1)),
+                                    ),
                                   ),
                                 ),
-                              ),
-                              SizedBox(width: 80.w),
-                              Expanded(
-                                flex: 1,
-                                child: WhiteButton(
-                                  onPressed: () {},
-                                  child: Text(
-                                    'Девушки',
-                                    style: TextStyle(
-                                        color:
-                                            Color.fromRGBO(127, 187, 251, 1)),
+                                SizedBox(width: 80.w),
+                                Expanded(
+                                  flex: 1,
+                                  child: WhiteButton(
+                                    onPressed: () {},
+                                    child: Text(
+                                      'Девушки',
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromRGBO(127, 187, 251, 1)),
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
-                          ),
-                          Center(
-                            child: GragientButtonTwo(
-                              onPressed: () {},
-                              child: Text(
-                                'Все',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255)),
+                              ],
+                            ),
+                            Center(
+                              child: GragientButtonTwo(
+                                onPressed: () {},
+                                child: Text(
+                                  'Все',
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 255, 255, 255)),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 18.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 1,
-                            child: GragientButtonTwo(
-                              onPressed: () {},
-                              child: Text(
-                                '🔥 Страсть',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255)),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 10.w),
-                          Expanded(
-                            flex: 1,
-                            child: WhiteButton(
-                              onPressed: () {},
-                              child: Text(
-                                '🍹 Вечеринка',
-                                style: TextStyle(
-                                    color: Color.fromRGBO(127, 187, 251, 1)),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 18.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 1,
-                            child: WhiteButton(
-                              onPressed: () {},
-                              child: Text(
-                                '👼🏻 Семья',
-                                style: TextStyle(
-                                    color: Color.fromRGBO(127, 187, 251, 1)),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 10.w),
-                          Expanded(
-                            flex: 1,
-                            child: GragientButtonTwo(
-                              onPressed: () {},
-                              child: Text(
-                                '🎮  Игры',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255)),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 18.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 1,
-                            child: GragientButtonTwo(
-                              onPressed: () {},
-                              child: Text(
-                                '🎨 Творчество',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255)),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 10.w),
-                          Expanded(
-                            flex: 1,
-                            child: WhiteButton(
-                              onPressed: () {},
-                              child: Text(
-                                '🦋 Развитие',
-                                style: TextStyle(
-                                    color: Color.fromRGBO(127, 187, 251, 1)),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 18.h),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Expanded(
-                            flex: 1,
-                            child: WhiteButton(
-                              onPressed: () {},
-                              child: Text(
-                                '💵 Бизнес',
-                                style: TextStyle(
-                                    color: Color.fromRGBO(127, 187, 251, 1)),
-                              ),
-                            ),
-                          ),
-                          SizedBox(width: 10.w),
-                          Expanded(
-                            flex: 1,
-                            child: GragientButtonTwo(
-                              onPressed: () {},
-                              child: Text(
-                                '🔋️ Технологии',
-                                style: TextStyle(
-                                    color: Color.fromARGB(255, 255, 255, 255)),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(height: 18.h),
-                      ButtonWhiteLong(
-                        onPressed: () {},
-                        child: Text(
-                          '🦄 Обменяться подарками',
-                          style: TextStyle(
-                              color: Color.fromRGBO(127, 187, 251, 1)),
+                          ],
                         ),
-                      ),
-                      SizedBox(height: 18.h),
-                      ButtonWhiteLong(
-                        onPressed: () {},
-                        child: Text(
-                          '🕊 Поделиться историей ',
-                          style: TextStyle(
-                              color: Color.fromRGBO(127, 187, 251, 1)),
+                        SizedBox(height: 18.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: GragientButtonTwo(
+                                onPressed: () {},
+                                child: Text(
+                                  '🔥 Страсть',
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 255, 255, 255)),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10.w),
+                            Expanded(
+                              flex: 1,
+                              child: WhiteButton(
+                                onPressed: () {},
+                                child: Text(
+                                  '🍹 Вечеринка',
+                                  style: TextStyle(
+                                      color: Color.fromRGBO(127, 187, 251, 1)),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                      SizedBox(height: 18.h),
-                      GragientLongButtonOne(
-                        onPressed: () {},
-                        child: Text('⛵ Приключение'),
-                      ),
-                      SizedBox(height: 18.h),
-                      ButtonWhiteLong(
-                        onPressed: () {},
-                        child: Text(
-                          '🏖 Совместный Chill ',
-                          style: TextStyle(
-                              color: Color.fromRGBO(127, 187, 251, 1)),
+                        SizedBox(height: 18.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: WhiteButton(
+                                onPressed: () {},
+                                child: Text(
+                                  '👼🏻 Семья',
+                                  style: TextStyle(
+                                      color: Color.fromRGBO(127, 187, 251, 1)),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10.w),
+                            Expanded(
+                              flex: 1,
+                              child: GragientButtonTwo(
+                                onPressed: () {},
+                                child: Text(
+                                  '🎮  Игры',
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 255, 255, 255)),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                      SizedBox(height: 18.h),
-                      Row(
-                        children: [
-                          Text(
-                            '21 год',
+                        SizedBox(height: 18.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: GragientButtonTwo(
+                                onPressed: () {},
+                                child: Text(
+                                  '🎨 Творчество',
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 255, 255, 255)),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10.w),
+                            Expanded(
+                              flex: 1,
+                              child: WhiteButton(
+                                onPressed: () {},
+                                child: Text(
+                                  '🦋 Развитие',
+                                  style: TextStyle(
+                                      color: Color.fromRGBO(127, 187, 251, 1)),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 18.h),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Expanded(
+                              flex: 1,
+                              child: WhiteButton(
+                                onPressed: () {},
+                                child: Text(
+                                  '💵 Бизнес',
+                                  style: TextStyle(
+                                      color: Color.fromRGBO(127, 187, 251, 1)),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10.w),
+                            Expanded(
+                              flex: 1,
+                              child: GragientButtonTwo(
+                                onPressed: () {},
+                                child: Text(
+                                  '🔋️ Технологии',
+                                  style: TextStyle(
+                                      color:
+                                          Color.fromARGB(255, 255, 255, 255)),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 18.h),
+                        ButtonWhiteLong(
+                          onPressed: () {},
+                          child: Text(
+                            '🦄 Обменяться подарками',
                             style: TextStyle(
-                                color: Color.fromRGBO(127, 187, 251, 1),
-                                fontWeight: FontWeight.bold),
+                                color: Color.fromRGBO(127, 187, 251, 1)),
                           ),
-                          Spacer(),
-                          Text(
-                            '34 года',
+                        ),
+                        SizedBox(height: 18.h),
+                        ButtonWhiteLong(
+                          onPressed: () {},
+                          child: Text(
+                            '🕊 Поделиться историей ',
                             style: TextStyle(
-                                color: Color.fromRGBO(255, 139, 173, 1),
-                                fontWeight: FontWeight.bold),
+                                color: Color.fromRGBO(127, 187, 251, 1)),
                           ),
-                        ],
-                      ),
-                      AgeSetWidget(),
-                      SizedBox(height: 10.h),
-                    ],
+                        ),
+                        SizedBox(height: 18.h),
+                        GragientLongButtonOne(
+                          onPressed: () {},
+                          child: Text('⛵ Приключение'),
+                        ),
+                        SizedBox(height: 18.h),
+                        ButtonWhiteLong(
+                          onPressed: () {},
+                          child: Text(
+                            '🏖 Совместный Chill ',
+                            style: TextStyle(
+                                color: Color.fromRGBO(127, 187, 251, 1)),
+                          ),
+                        ),
+                        SizedBox(height: 18.h),
+                        Row(
+                          children: [
+                            Text(
+                              '21 год',
+                              style: TextStyle(
+                                  color: Color.fromRGBO(127, 187, 251, 1),
+                                  fontWeight: FontWeight.bold),
+                            ),
+                            Spacer(),
+                            Text(
+                              '34 года',
+                              style: TextStyle(
+                                  color: Color.fromRGBO(255, 139, 173, 1),
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                        SizedBox(height: 8.h),
+                        AgeSetWidget(),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-            Align(
-              alignment: FractionalOffset.bottomCenter,
-              child: Padding(
-                padding: EdgeInsets.only(bottom: 20.h),
-                child: GragientLongButtonTwo(
-                  onPressed: () {},
-                  child: Text('Применить'),
+              Align(
+                alignment: FractionalOffset.bottomCenter,
+                child: Padding(
+                  padding: EdgeInsets.only(bottom: 20.h),
+                  child: GragientLongButtonTwo(
+                    onPressed: () {},
+                    child: Text('Применить'),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

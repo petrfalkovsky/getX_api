@@ -79,7 +79,7 @@ class ChatPageTwo extends GetView<ChatPageTwoController> {
           children: [
             Container(
                 height: MediaQuery.of(context).size.height * 0.84,
-                child: Image.asset("assets/images/lenny.png")),
+                child: Image.asset("assets/gif/lenny.gif")),
             Positioned.fill(
               // bottom: 40,
               child: Stack(

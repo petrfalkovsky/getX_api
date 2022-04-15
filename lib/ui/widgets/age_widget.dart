@@ -75,7 +75,7 @@ class AgeSetWidget extends StatelessWidget {
                       color:
                           Color.fromARGB(255, 141, 141, 141).withOpacity(0.4),
                     ),
-                    width: 250,
+                    width: 230,
                     height: 5,
                   ),
                 ),

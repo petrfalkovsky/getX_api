@@ -46,7 +46,7 @@ class BirthdayDatePage extends GetView<BirthdayDatePageController> {
             Align(
               alignment: FractionalOffset.topCenter,
               child: Padding(
-                padding: EdgeInsets.only(top: 110.h),
+                padding: EdgeInsets.only(top: 70.h),
                 child: GragientLongButtonOne(
                   onPressed: () {},
                   child: Text('01 Марта 1927'),
@@ -57,7 +57,7 @@ class BirthdayDatePage extends GetView<BirthdayDatePageController> {
               child: Align(
                 alignment: FractionalOffset.topCenter,
                 child: Padding(
-                  padding: EdgeInsets.only(top: 150.h),
+                  padding: EdgeInsets.only(top: 100.h),
                   child: Column(
                     children: [
                       SizedBox(height: 25.h),
@@ -152,7 +152,7 @@ class BirthdayDatePage extends GetView<BirthdayDatePageController> {
             Align(
               alignment: FractionalOffset.bottomCenter,
               child: Padding(
-                padding: EdgeInsets.only(bottom: 20.h),
+                padding: EdgeInsets.only(bottom: 44.h),
                 child: GragientLongButtonTwo(
                   onPressed: () {},
                   child: Text('Благодарю!'),
