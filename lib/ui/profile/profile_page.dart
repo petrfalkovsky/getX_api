@@ -130,24 +130,20 @@ class ProfilePage extends GetView<ProfileController> {
                   SizedBox(height: 10.h),
                   Row(
                     children: [
-                      RichText(
-                        text: TextSpan(
-                          text: 'Твоё имя',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 25,
-                              color: Colors.white),
-                          children: <TextSpan>[
-                            TextSpan(
-                              text: '',
-                              style: DefaultTextStyle.of(context).style,
-                            ),
-                            TextSpan(
-                                text: ' 18',
-                                style:
-                                    TextStyle(fontWeight: FontWeight.normal)),
-                          ],
-                        ),
+                      Text(
+                        'Твое имя',
+                        style: TextStyle(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 25,
+                            color: Colors.white),
+                      ),
+                      SizedBox(width: 5.w),
+                      Text(
+                        '21',
+                        style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 25,
+                            color: Colors.white),
                       ),
                       SizedBox(width: 14.w),
                       Image.asset("assets/icons/online_point.png", width: 10.w),
@@ -178,7 +174,6 @@ class ProfilePage extends GetView<ProfileController> {
                             textStyle: TextStyle(
                               fontWeight: FontWeight.w500,
                               fontSize: 16,
-                              // fontFamily: Inter
                             ),
                             padding: EdgeInsets.symmetric(
                                 vertical: 10, horizontal: 23),
@@ -201,7 +196,6 @@ class ProfilePage extends GetView<ProfileController> {
                             textStyle: TextStyle(
                               fontWeight: FontWeight.normal,
                               fontSize: 16,
-                              // fontFamily: Inter
                             ),
                             padding: EdgeInsets.symmetric(
                                 vertical: 5, horizontal: 23),

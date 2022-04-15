@@ -93,9 +93,9 @@ class ChatPageTwo extends GetView<ChatPageTwoController> {
                             boxShadow: [
                               BoxShadow(
                                 color: Color.fromARGB(255, 27, 17, 167)
-                                    .withOpacity(0.2),
-                                spreadRadius: 0.5,
-                                blurRadius: 10,
+                                    .withOpacity(0.05),
+                                spreadRadius: 1,
+                                blurRadius: 20,
                                 offset: Offset(0, 0),
                               )
                             ],
@@ -137,17 +137,6 @@ class ChatPageTwo extends GetView<ChatPageTwoController> {
                     child: Padding(
                       padding: const EdgeInsets.fromLTRB(20, 0, 0, 60),
                       child: Container(
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color.fromARGB(255, 40, 36, 88)
-                                  .withOpacity(0.07),
-                              spreadRadius: 3,
-                              blurRadius: 10,
-                              offset: Offset(3, 0),
-                            )
-                          ],
-                        ),
                         child: SizedBox(
                           height: 40.h,
                           child: ListView(

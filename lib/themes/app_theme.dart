@@ -39,7 +39,7 @@ class AppTheme {
         colorScheme: lightBase.colorScheme.copyWith(secondary: accentColor),
         visualDensity: visualDensity,
         textTheme:
-            GoogleFonts.interTextTheme().apply(bodyColor: AppColors.textDark),
+            GoogleFonts.lobsterTextTheme().apply(bodyColor: AppColors.textDark),
         backgroundColor: _LightColors.background,
         appBarTheme: lightBase.appBarTheme.copyWith(
           iconTheme: lightBase.iconTheme,

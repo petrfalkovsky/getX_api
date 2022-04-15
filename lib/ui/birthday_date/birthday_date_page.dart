@@ -22,7 +22,7 @@ class BirthdayDatePage extends GetView<BirthdayDatePageController> {
         title: Center(
           child: Text('Дата рождения',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: AppColors.secondary,
               )),
@@ -70,88 +70,79 @@ class BirthdayDatePage extends GetView<BirthdayDatePageController> {
                           boxShadow: [
                             BoxShadow(
                               color: Color.fromARGB(255, 27, 17, 167)
-                                  .withOpacity(0.1),
+                                  .withOpacity(0.05),
                               spreadRadius: 3,
                               blurRadius: 10,
                               offset: Offset(3, 0),
                             )
                           ],
                         ),
-                        child: Center(
-                          child: Padding(
-                            padding: const EdgeInsets.all(15.0),
-                            child: RichText(
-                              textAlign: TextAlign.center,
-                              text: TextSpan(
-                                text: 'Характер, сила воли — 1111',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 17,
-                                    color: Color.fromARGB(255, 204, 120, 120)),
-                                children: <TextSpan>[
-                                  TextSpan(
-                                    text: '\n',
-                                  ),
-                                  TextSpan(
-                                    text:
-                                        '«Лидер» — спокойный и всегда уверенный в себе. Это две главные черты. Негромко, но весомо заявляет свое мнение, заставляя прислушаться или даже притихнуть остальных. Жесткость проявляет редко, но метко. Она и так в нем чувствуется. Большинство самых богатых и влиятельных людей из политики, бизнеса, военной сферы и спорта имеют характеры 1111 и 11111.',
+                        child: Padding(
+                          padding: const EdgeInsets.all(20.0),
+                          child: Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Характер, сила воли — 1111',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w500,
                                         fontSize: 17,
-                                        color: Color.fromARGB(255, 0, 0, 0)),
-                                  )
+                                        color:
+                                            Color.fromRGBO(255, 139, 173, 1)),
+                                  ),
                                 ],
                               ),
-                            ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      '«Лидер» — спокойный и всегда уверенный в себе. Это две главные черты. Негромко, но весомо заявляет свое мнение, заставляя прислушаться или даже притихнуть остальных. Жесткость проявляет редко, но метко. Она и так в нем чувствуется. Большинство самых богатых и влиятельных людей из политики, бизнеса, военной сферы и спорта имеют характеры 1111 и 11111.',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 17,
+                                          color: Color.fromARGB(255, 0, 0, 0)),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 20.h),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    'Энергетика, харизма — нет цифр',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 17,
+                                        color:
+                                            Color.fromRGBO(255, 139, 173, 1)),
+                                  ),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Expanded(
+                                    child: Text(
+                                      '«Нет энергии» — быстрая утомляемость от перенапряжения или рутинной работы. Частые депрессии. Выраженное желание черпать энергию от эмоций(особенно негативных) других людей — по сути вампиризм. Будет сложно выбрать себе работу по силам. Для жизни необходимы здоровый сон',
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 17,
+                                          color: Color.fromARGB(255, 0, 0, 0)),
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ],
                           ),
                         ),
                       ),
                       SizedBox(height: 10.h),
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.9,
-                        // height: MediaQuery.of(context).size.width * 0.8,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(25),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color.fromARGB(255, 27, 17, 167)
-                                  .withOpacity(0.1),
-                              spreadRadius: 3,
-                              blurRadius: 10,
-                              offset: Offset(3, 0),
-                            )
-                          ],
-                        ),
-                        child: Center(
-                          child: Padding(
-                            padding: const EdgeInsets.all(15.0),
-                            child: RichText(
-                              textAlign: TextAlign.center,
-                              text: TextSpan(
-                                text: 'Энергетика, харизма — нет цифр',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 17,
-                                    color: Color.fromARGB(255, 204, 120, 120)),
-                                children: <TextSpan>[
-                                  TextSpan(
-                                    text: '\n',
-                                  ),
-                                  TextSpan(
-                                    text:
-                                        '«Нет энергии» — быстрая утомляемость от перенапряжения или рутинной работы. Частые депрессии. Выраженное желание черпать энергию от эмоций(особенно негативных) других людей — по сути вампиризм. Будет сложно выбрать себе работу по силам. Для жизни необходимы здоровый сон, упражнения, йога.',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.w500,
-                                        fontSize: 17,
-                                        color: Color.fromARGB(255, 0, 0, 0)),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
                       SizedBox(height: 10.h),
                     ],
                   ),

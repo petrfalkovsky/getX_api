@@ -44,24 +44,20 @@ class HomePage extends GetView<HomeController> {
                     child: Row(
                       children: [
                         Image.asset("assets/icons/star.png", height: 50.h),
-                        RichText(
-                          text: TextSpan(
-                            text: 'Эльвира',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 25,
-                                color: Colors.white),
-                            children: <TextSpan>[
-                              TextSpan(
-                                text: '',
-                                style: DefaultTextStyle.of(context).style,
-                              ),
-                              TextSpan(
-                                  text: ' 21',
-                                  style:
-                                      TextStyle(fontWeight: FontWeight.normal)),
-                            ],
-                          ),
+                        Text(
+                          'Эльвира',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 25,
+                              color: Colors.white),
+                        ),
+                        SizedBox(width: 5.w),
+                        Text(
+                          '21',
+                          style: TextStyle(
+                              fontWeight: FontWeight.normal,
+                              fontSize: 25,
+                              color: Colors.white),
                         ),
                         SizedBox(width: 14.w),
                         Image.asset("assets/icons/online_point.png",
@@ -83,92 +79,53 @@ class HomePage extends GetView<HomeController> {
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: [
-                        OutlinedButton.icon(
+                        BlurBubble(
                           onPressed: () {},
-                          icon: Icon(
-                            Icons.favorite,
-                            color: Color.fromARGB(255, 235, 9, 47),
-                            size: 24.0,
-                          ),
-                          label: Text('Страсть '),
-                          style: OutlinedButton.styleFrom(
-                            primary: Colors.white,
-                            backgroundColor: Colors.white.withOpacity(0.4),
-                            minimumSize: Size(114, 40),
-                            maximumSize: Size(300, 40),
-                            textStyle: TextStyle(
-                              fontWeight: FontWeight.normal,
-                              fontSize: 16,
-                              // fontFamily: Inter
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 5, horizontal: 23),
-                            shape: const RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(50))),
-                            side: BorderSide(
-                                color: Colors.white.withOpacity(0.2), width: 0),
+                          child: Text(
+                            '🔥 Страсть',
+                            style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                                color: Colors.white),
                           ),
                         ),
                         SizedBox(width: 11.w),
-                        ButtonBlur(
+                        BlurBubble(
                           onPressed: () {},
-                          child: Text('Блюр'),
-                        ),
-                        SizedBox(width: 11.w),
-                        OutlinedButton.icon(
-                          onPressed: () {},
-                          icon: Icon(
-                            Icons.games,
-                            color: Color.fromARGB(255, 8, 8, 8),
-                            size: 24.0,
-                          ),
-                          label: Text('Игры '),
-                          style: OutlinedButton.styleFrom(
-                            primary: Colors.white,
-                            backgroundColor: Colors.white.withOpacity(0.4),
-                            minimumSize: Size(114, 40),
-                            maximumSize: Size(300, 40),
-                            textStyle: TextStyle(
-                              fontWeight: FontWeight.normal,
-                              fontSize: 16,
-                              // fontFamily: Inter
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 5, horizontal: 23),
-                            shape: const RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(50))),
-                            side: BorderSide(
-                                color: Colors.white.withOpacity(0.2), width: 0),
+                          child: Text(
+                            '🎮  Игры',
+                            style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                                color: Colors.white
+                                // fontFamily: Inter
+                                ),
                           ),
                         ),
                         SizedBox(width: 11.w),
-                        OutlinedButton.icon(
+                        BlurBubble(
                           onPressed: () {},
-                          icon: Icon(
-                            Icons.favorite,
-                            color: Color.fromARGB(255, 186, 235, 9),
-                            size: 24.0,
+                          child: Text(
+                            '💛  Свобода',
+                            style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                                color: Colors.white
+                                // fontFamily: Inter
+                                ),
                           ),
-                          label: Text('Просветление '),
-                          style: OutlinedButton.styleFrom(
-                            primary: Colors.white,
-                            backgroundColor: Colors.white.withOpacity(0.4),
-                            minimumSize: Size(114, 40),
-                            maximumSize: Size(300, 40),
-                            textStyle: TextStyle(
-                              fontWeight: FontWeight.normal,
-                              fontSize: 16,
-                              // fontFamily: Inter
-                            ),
-                            padding: EdgeInsets.symmetric(
-                                vertical: 5, horizontal: 23),
-                            shape: const RoundedRectangleBorder(
-                                borderRadius:
-                                    BorderRadius.all(Radius.circular(50))),
-                            side: BorderSide(
-                                color: Colors.white.withOpacity(0.2), width: 0),
+                        ),
+                        SizedBox(width: 11.w),
+                        BlurBubble(
+                          onPressed: () {},
+                          child: Text(
+                            '🧘‍♂️Просветление',
+                            style: TextStyle(
+                                fontWeight: FontWeight.normal,
+                                fontSize: 16,
+                                color: Colors.white
+                                // fontFamily: Inter
+                                ),
                           ),
                         ),
                         SizedBox(width: 11.w),
@@ -216,11 +173,15 @@ class ProcentsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      '48%',
-      style: TextStyle(
-        fontSize: 17,
-        color: Colors.white,
+    return GestureDetector(
+      onTap: () => Get.toNamed('/procents_page'),
+      child: Text(
+        '48%',
+        style: TextStyle(
+          fontSize: 17,
+          color: Colors.white,
+          fontWeight: FontWeight.w700,
+        ),
       ),
     );
   }

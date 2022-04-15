@@ -25,7 +25,7 @@ class InterestsPage extends GetView<InterestsController> {
           padding: const EdgeInsets.only(left: 50),
           child: Text('🌈  Интересы',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: AppColors.secondary,
               )),

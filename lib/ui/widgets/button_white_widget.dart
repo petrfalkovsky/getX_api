@@ -30,7 +30,7 @@ class WhiteButton extends StatelessWidget {
             color: Color.fromARGB(255, 27, 17, 167).withOpacity(0.05),
             spreadRadius: 3,
             blurRadius: 10,
-            offset: Offset(3, 0),
+            offset: Offset(0, 0),
           )
         ],
         color: Colors.white,

@@ -22,7 +22,7 @@ class MyCityPage extends GetView<MyCityPageController> {
         title: Center(
           child: Text('Мой город',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: AppColors.secondary,
               )),
