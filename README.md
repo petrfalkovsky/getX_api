@@ -1,5 +1,5 @@
 # Фриланс проект - верстка для дейтингового приложения
-от [Анны](https://t.me/kkkotovaa) выполняет [Тереньтев Петр](https://career.habr.com/poteryal_trusy)
+от [Анны](https://t.me/kkkotovaa) выполняет [Терентьев Петр](https://career.habr.com/poteryal_trusy)
 
 ## Приложение Tandem
 используемые технологии: Flutter/Dart, GetX, Git, Dio, Figma
