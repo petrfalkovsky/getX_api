@@ -13,7 +13,8 @@
 - на русском языке [в гугл док](https://docs.google.com/document/d/1CCfJFvgmqnxjfiOAsmCUO2wQwqHyatsAuDBLwni1FnI/edit)
 
 ---
-гифка в процессе
+гифка:
+
 ![for gif](https://user-images.githubusercontent.com/13994582/163674584-e3189256-c115-4636-a035-467e27656fb8.gif)
 
 
