@@ -148,7 +148,7 @@ class ProfilePage extends GetView<ProfileController> {
                       SizedBox(width: 14.w),
                       Image.asset("assets/icons/online_point.png", width: 10.w),
                       Spacer(),
-                      GragientButtonOne(
+                      GragientShortButtonBase(
                         onPressed: () => Get.toNamed('/mycity_page'),
                         child: Text('Москва'),
                       )

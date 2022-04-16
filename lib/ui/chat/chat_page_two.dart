@@ -34,7 +34,7 @@ class ChatPageTwo extends GetView<ChatPageTwoController> {
                       'Олеся',
                       style: TextStyle(
                         fontSize: 15,
-                        color: AppColors.secondary,
+                        color: AppConfig.secondary,
                       ),
                     ),
                     SizedBox(height: 7.h),
@@ -142,7 +142,7 @@ class ChatPageTwo extends GetView<ChatPageTwoController> {
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: [
-                              GragientButtonOne(
+                              GragientShortButtonBase(
                                 onPressed: () {},
                                 child: Text('Эффектно выглядишь)'),
                               ),

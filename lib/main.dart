@@ -8,10 +8,6 @@ import 'routes/app_pages.dart';
 import 'routes/app_routes.dart';
 
 void main() {
-  // SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [
-  //     SystemUiOverlay.bottom,
-  //   ]);
-  // SystemChrome.setEnabledSystemUIOverlays(SystemUiOverlay.values);
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [
     SystemUiOverlay.bottom,

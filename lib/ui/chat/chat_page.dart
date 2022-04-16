@@ -5,6 +5,7 @@ import 'package:getx_app/themes/app_theme.dart';
 import 'package:getx_app/ui/chat/chat_controller.dart';
 import 'package:getx_app/ui/chat/bubbles_widget.dart';
 import 'package:getx_app/ui/chat/voice_bubble.dart';
+import 'package:getx_app/ui/widgets/default_container.dart';
 
 class ChatPage extends GetView<ChatPageController> {
   @override
@@ -34,7 +35,7 @@ class ChatPage extends GetView<ChatPageController> {
                       'Кристина',
                       style: TextStyle(
                         fontSize: 15,
-                        color: AppColors.secondary,
+                        color: AppConfig.secondary,
                       ),
                     ),
                     SizedBox(height: 7.h),
@@ -74,103 +75,94 @@ class ChatPage extends GetView<ChatPageController> {
           backgroundColor: Colors.transparent,
           elevation: 0,
         ),
-        body: Stack(
-          alignment: Alignment.center,
-          children: [
-            ListView(
-              children: [
-                UserProfileBubble(
-                  onPressed: () {},
-                  child: Text(
-                    'Они сошлись. Волна и камень, Стихи и проза, лед и пламень, Не столь различны меж собой. ',
-                    style: const TextStyle(
-                      color: AppColors.textLigth,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
+        body: SafeArea(
+          top: false,
+          minimum: const EdgeInsets.all(20.0),
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              ListView(
+                children: [
+                  UserProfileBubble(
+                    onPressed: () {},
+                    child: Text(
+                      'Они сошлись. Волна и камень, Стихи и проза, лед и пламень, Не столь различны меж собой. ',
+                      style: const TextStyle(
+                        color: AppConfig.textLigth,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-                SecondHalfUserProfileBubble(
-                  onPressed: () {},
-                  child: Text(
-                    'Хочу тебя прямо сейчас ️👄',
-                    style: const TextStyle(
-                      color: AppColors.textDark,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
+                  SecondHalfUserProfileBubble(
+                    onPressed: () {},
+                    child: Text(
+                      'Хочу тебя прямо сейчас ️👄',
+                      style: const TextStyle(
+                        color: AppConfig.textDark,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-                SecondUserProfileBubble(
-                  onPressed: () {},
-                  child: Text(
-                    'Что вам дано, то не влечет Вас непрестанно змий зовет К себе, к таинственному древу. Запретный плод вам подавай, А без того вам рай - не рай',
-                    style: const TextStyle(
-                      color: AppColors.textDark,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
+                  SecondUserProfileBubble(
+                    onPressed: () {},
+                    child: Text(
+                      'Что вам дано, то не влечет Вас непрестанно змий зовет К себе, к таинственному древу. Запретный плод вам подавай, А без того вам рай - не рай',
+                      style: const TextStyle(
+                        color: AppConfig.textDark,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-                UserProfileBubble(
-                  onPressed: () {},
-                  child: Text(
-                    'Это так прелестно',
-                    style: const TextStyle(
-                      color: AppColors.textLigth,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
+                  UserProfileBubble(
+                    onPressed: () {},
+                    child: Text(
+                      'Это так прелестно',
+                      style: const TextStyle(
+                        color: AppConfig.textLigth,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
-                ),
-                VoiceLightBubble(),
-                VoiceDarkBubble(),
-              ],
-            ),
-            Positioned(
-              bottom: 40,
-              child: Container(
-                  height: 40,
-                  width: MediaQuery.of(context).size.width * 0.95,
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color:
-                              Color.fromARGB(255, 27, 17, 167).withOpacity(0.2),
-                          spreadRadius: 0.5,
-                          blurRadius: 10,
-                          offset: Offset(0, 0),
-                        )
-                      ],
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(25.0))),
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(3, 0, 0, 0),
-                    child: Row(
-                      children: [
-                        Image.asset('assets/icons/add_pic.png', width: 34),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(11, 10, 11, 10),
-                          child: Container(
-                              width: MediaQuery.of(context).size.width * 0.55,
-                              child: TextFormField(
-                                decoration: new InputDecoration.collapsed(
-                                  hintText: 'Сообщение',
-                                ),
-                              )),
-                        ),
-                        Spacer(),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(10, 2, 15, 0),
-                          child: Image.asset(
-                              'assets/icons/direct_messege_appbar.png',
-                              height: 20),
-                        ),
-                      ],
-                    ),
-                  )),
-            )
-          ],
+                  VoiceLightBubble(),
+                  VoiceDarkBubble(),
+                ],
+              ),
+              Positioned(
+                bottom: 20,
+                child: DefaultContainer(
+                    width: MediaQuery.of(context).size.width * 0.88,
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(3, 0, 0, 0),
+                      child: Row(
+                        children: [
+                          Image.asset('assets/icons/add_pic.png', width: 34),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(11, 10, 11, 10),
+                            child: Container(
+                                width: MediaQuery.of(context).size.width * 0.55,
+                                child: TextFormField(
+                                  decoration: new InputDecoration.collapsed(
+                                    hintText: 'Сообщение',
+                                  ),
+                                )),
+                          ),
+                          Spacer(),
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(10, 2, 15, 0),
+                            child: Image.asset(
+                                'assets/icons/direct_messege_appbar.png',
+                                height: 20),
+                          ),
+                        ],
+                      ),
+                    )),
+              )
+            ],
+          ),
         ));
   }
 }

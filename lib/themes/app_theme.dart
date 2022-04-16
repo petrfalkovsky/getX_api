@@ -2,7 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-abstract class AppColors {
+abstract class AppConfig {
+  ////*------------------Цвета-----------------------------*///
+  ///Базовые
+  static const whiteColor = Color.fromARGB(255, 255, 255, 255);
+  static const blackColor = Color.fromARGB(255, 0, 0, 0);
+  static const blueColor = Color.fromRGBO(127, 187, 251, 1);
+  static const pinkColor = Color.fromRGBO(255, 139, 173, 1);
+
+  ///Градиент базовый
+  static const startPointGradientBase = pinkColor;
+  static const endPointGradientBase = blueColor;
+
+  ///Градиент дополнительный
+  static const startPointGradientAddon = blueColor;
+  static const endPointGradientAddon = Color.fromRGBO(149, 134, 253, 1);
+
   static const secondary = Color.fromARGB(255, 6, 10, 20);
   static const accent = Color(0xFFD6755B);
   static const textDark = Color.fromARGB(255, 0, 0, 0);
@@ -17,17 +32,17 @@ abstract class AppColors {
 
 abstract class _LightColors {
   static const background = Color.fromARGB(255, 77, 69, 69);
-  static const card = AppColors.cardLight;
+  static const card = AppConfig.cardLight;
 }
 
 abstract class _DarkColors {
   static const background = Color(0xFF1B1E1F);
-  static const card = AppColors.cardDark;
+  static const card = AppConfig.cardDark;
 }
 
 /// Reference to the application theme.
 class AppTheme {
-  static const accentColor = AppColors.accent;
+  static const accentColor = AppConfig.accent;
   static final visualDensity = VisualDensity.adaptivePlatformDensity;
 
   final darkBase = ThemeData.dark();
@@ -39,7 +54,7 @@ class AppTheme {
         colorScheme: lightBase.colorScheme.copyWith(secondary: accentColor),
         visualDensity: visualDensity,
         textTheme:
-            GoogleFonts.lobsterTextTheme().apply(bodyColor: AppColors.textDark),
+            GoogleFonts.lobsterTextTheme().apply(bodyColor: AppConfig.textDark),
         backgroundColor: _LightColors.background,
         appBarTheme: lightBase.appBarTheme.copyWith(
           iconTheme: lightBase.iconTheme,
@@ -49,19 +64,19 @@ class AppTheme {
           titleTextStyle: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 17,
-            color: AppColors.textDark,
+            color: AppConfig.textDark,
           ),
           systemOverlayStyle: SystemUiOverlayStyle.dark,
         ),
         scaffoldBackgroundColor: _LightColors.background,
         elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(primary: AppColors.secondary),
+          style: ElevatedButton.styleFrom(primary: AppConfig.secondary),
         ),
         cardColor: _LightColors.card,
         primaryTextTheme: const TextTheme(
-          headline6: TextStyle(color: AppColors.textDark),
+          headline6: TextStyle(color: AppConfig.textDark),
         ),
-        iconTheme: const IconThemeData(color: AppColors.iconDark),
+        iconTheme: const IconThemeData(color: AppConfig.iconDark),
       );
 
   /// Dark theme and its settings.
@@ -70,7 +85,7 @@ class AppTheme {
         colorScheme: darkBase.colorScheme.copyWith(secondary: accentColor),
         visualDensity: visualDensity,
         textTheme:
-            GoogleFonts.robotoTextTheme().apply(bodyColor: AppColors.textLigth),
+            GoogleFonts.robotoTextTheme().apply(bodyColor: AppConfig.textLigth),
         backgroundColor: _DarkColors.background,
         appBarTheme: darkBase.appBarTheme.copyWith(
           backgroundColor: Colors.transparent,
@@ -84,7 +99,7 @@ class AppTheme {
         ),
         scaffoldBackgroundColor: _DarkColors.background,
         elevatedButtonTheme: ElevatedButtonThemeData(
-          style: ElevatedButton.styleFrom(primary: AppColors.secondary),
+          style: ElevatedButton.styleFrom(primary: AppConfig.secondary),
         ),
         cardColor: _DarkColors.card,
         primaryTextTheme: const TextTheme(

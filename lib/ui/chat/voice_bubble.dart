@@ -19,7 +19,7 @@ class VoiceDarkBubble extends StatelessWidget {
   Widget build(BuildContext context) {
     final borderRadius = this.borderRadius ?? BorderRadius.circular(25);
     return Padding(
-      padding: const EdgeInsets.fromLTRB(0, 5, 18, 5),
+      padding: const EdgeInsets.fromLTRB(0, 5, 0, 5),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.end,
@@ -126,7 +126,7 @@ class VoiceLightBubble extends StatelessWidget {
   Widget build(BuildContext context) {
     final borderRadius = this.borderRadius ?? BorderRadius.circular(25);
     return Padding(
-      padding: const EdgeInsets.fromLTRB(18, 5, 18, 5),
+      padding: const EdgeInsets.fromLTRB(0, 5, 18, 5),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,

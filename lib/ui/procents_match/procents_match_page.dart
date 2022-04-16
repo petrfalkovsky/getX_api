@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:getx_app/themes/app_theme.dart';
 import 'package:getx_app/ui/birthday_date/birthday_date_controller.dart';
-import 'package:getx_app/ui/widgets/button_gradient_long_two_widget.dart';
+import 'package:getx_app/ui/widgets/button_gradient_long_addon.dart';
 import 'package:getx_app/ui/widgets/procent_match_long_widget.dart';
 
 class ProcentsPage extends GetView<BirthdayDatePageController> {
@@ -34,7 +34,7 @@ class ProcentsPage extends GetView<BirthdayDatePageController> {
                     'Кристина',
                     style: TextStyle(
                       fontSize: 15,
-                      color: AppColors.secondary,
+                      color: AppConfig.secondary,
                     ),
                   ),
                   SizedBox(height: 7.h),
@@ -345,7 +345,7 @@ class ProcentsPage extends GetView<BirthdayDatePageController> {
               alignment: FractionalOffset.bottomCenter,
               child: Padding(
                 padding: EdgeInsets.only(bottom: 20.h),
-                child: GragientLongButtonTwo(
+                child: GragientLongButtonAddon(
                   onPressed: () {},
                   child: Text('Благодарю!'),
                 ),

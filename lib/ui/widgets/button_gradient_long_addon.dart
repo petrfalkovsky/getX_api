@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:getx_app/ui/widgets/default_container.dart';
+import 'package:getx_app/ui/widgets/gradient_container_addon.dart';
 
-class WhiteLongButton extends StatelessWidget {
+class GragientLongButtonAddon extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final double? width;
   final double? height;
@@ -9,7 +9,7 @@ class WhiteLongButton extends StatelessWidget {
   final VoidCallback? onPressed;
   final Widget child;
 
-  const WhiteLongButton({
+  const GragientLongButtonAddon({
     Key? key,
     this.borderRadius,
     this.width,
@@ -26,7 +26,7 @@ class WhiteLongButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final borderRadius = this.borderRadius ?? BorderRadius.circular(50);
-    return DefaultContainer(
+    return GradientContainerAddon(
       width: width,
       child: ConstrainedBox(
         constraints:

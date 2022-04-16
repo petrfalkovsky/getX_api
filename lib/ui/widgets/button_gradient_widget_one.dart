@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class GragientButtonOne extends StatelessWidget {
+class GragientShortButtonBase extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
   final double? width;
   final double height;
@@ -8,7 +8,7 @@ class GragientButtonOne extends StatelessWidget {
   final VoidCallback? onPressed;
   final Widget child;
 
-  const GragientButtonOne({
+  const GragientShortButtonBase({
     Key? key,
     this.borderRadius,
     this.width,

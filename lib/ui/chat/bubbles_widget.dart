@@ -22,7 +22,7 @@ class UserProfileBubble extends StatelessWidget {
   Widget build(BuildContext context) {
     final borderRadius = this.borderRadius ?? BorderRadius.circular(20);
     return Padding(
-      padding: const EdgeInsets.fromLTRB(80, 5, 18, 5),
+      padding: const EdgeInsets.fromLTRB(80, 5, 0, 5),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.end,
@@ -87,7 +87,7 @@ class SecondUserProfileBubble extends StatelessWidget {
   Widget build(BuildContext context) {
     final borderRadius = this.borderRadius ?? BorderRadius.circular(15);
     return Padding(
-      padding: const EdgeInsets.fromLTRB(18, 5, 80, 5),
+      padding: const EdgeInsets.fromLTRB(0, 5, 80, 5),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -152,7 +152,7 @@ class SecondHalfUserProfileBubble extends StatelessWidget {
           bottomRight: Radius.circular(25),
         );
     return Padding(
-      padding: const EdgeInsets.fromLTRB(18, 5, 80, 5),
+      padding: const EdgeInsets.fromLTRB(0, 5, 80, 5),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
